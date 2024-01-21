@@ -1,11 +1,6 @@
 pipeline {
     agent any 
-    stages {
-        stage('Fetch code') { 
-            steps {
-                git branch: 'paac' url: 'https://github.com/MkDanish313/vprofile-project.git'
-            }
-        }
+    stages {  
         stage('Build') { 
             steps {
                 sh 'mvn install' 
